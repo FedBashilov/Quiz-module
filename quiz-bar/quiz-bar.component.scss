@@ -1,0 +1,99 @@
+@import 'src/theme/fons.scss';
+
+$iOS-text-semibold: 'SF Pro Display Semibold';
+$iOS-text-bold: 'SF Pro Display Bold';
+$iOS-text-regular: 'SF Pro Display Regular';
+
+$android-text-medium: 'Roboto Medium';
+$android-text-regular: 'Roboto Regular';
+
+
+.quizBar{
+  width: 100%;
+  margin: 8px auto;
+
+  color: #FFF;
+  background: inherit;
+}
+
+
+.track{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  left: 0%;     //move attribute
+  bottom: 3px;
+  margin-left: -10px;
+
+  color: #000;
+  font-family: $iOS-text-regular, $android-text-medium;
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 0.07px;
+
+  height: 24px;
+  width: 22px;
+  background: url(src/assets/images/track.svg) 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transition: left 0.15s linear;
+}
+
+.barLine{
+  display: flex;
+  flex-direction: row;
+  background: inherit;
+
+  position: relative;
+}
+
+.barSegment{
+  width: 100%;
+  height: 6px;
+  margin: 0 1px;
+  background: #D1D1D6;
+
+  z-index: 1;
+}
+
+.numbersOfQuestions{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 6px;
+
+  font-family: $iOS-text-semibold, $android-text-medium;
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 0.07px;
+}
+
+.barSegment{
+  --buffer-background: #D1D1D6;
+  --progress-background: #EAAB00;
+}
+.barSegment:first-child {
+  border-radius: 3px 0px 0px 3px;
+}
+
+.total_questions{
+  transform: translateX(50%);
+}
+
+.cup{
+  position: absolute;
+  right: -10px;
+  top: -8px;
+
+  height: 18px;
+  width: 18px;
+
+  z-index: 1000;
+}
+
+.hidden{
+  visibility: hidden;
+}

@@ -1,0 +1,18 @@
+<div class="quizBar">
+     <div class="track" [ngClass]="{hidden: cur_question >= quiz.questionAmount}">
+       <div class="track_text">
+         {{cur_question}}
+       </div>
+      </div>
+
+    <div class="barLine">
+      <ion-progress-bar  type="determinate" value="0" class="barSegment" *ngFor="let i of Arr(this.quiz.questionAmount/10).fill(1)">
+      </ion-progress-bar>
+      <img class="cup" src="../../../../assets/images/cup.svg"><img>
+    </div>
+
+    <div class="numbersOfQuestions">
+      <div>0</div>
+      <div class="total_questions">{{quiz.questionAmount}}</div>
+    </div>
+</div>

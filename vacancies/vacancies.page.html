@@ -1,0 +1,23 @@
+<ion-header no-border>
+  <ion-toolbar class="blue">
+    <ion-buttons>
+      <ion-back-button class="white_text" text=""></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+  <ion-content class="blue white_text">
+    <div class="hoooray">
+      Hoooray! You unlocked a secret vacancies!
+    </div>
+    <div class="sub_hoooray">
+      Your results are amazing and we offer you to apply on our secret vacancies:
+    </div>
+      <app-vacancies [vacancies]="vacancies"></app-vacancies>
+  </ion-content>
+
+  <ion-footer no-border>
+    <ion-toolbar class="blue white_text">
+      <ion-button class="next_button orange" expand="block" (click)="navCtrl.navigateForward('/result')">Next</ion-button>
+    </ion-toolbar>
+  </ion-footer>

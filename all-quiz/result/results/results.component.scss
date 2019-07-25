@@ -1,0 +1,83 @@
+@import 'src/theme/fons.scss';
+
+$iOS-text-semibold: 'SF Pro Display Semibold';
+$iOS-text-bold: 'SF Pro Display Bold';
+$iOS-text-regular: 'SF Pro Display Regular';
+
+$android-text-medium: 'Roboto Medium';
+$android-text-regular: 'Roboto Regular';
+
+//under circle
+.complete_title{
+  font-family: $iOS-text-bold, $android-text-regular;
+  font-size: 28px;
+  line-height: 34px;
+  text-align: center;
+  letter-spacing: 0.337647px;
+
+  margin: 0 20px 30px 20px;
+}
+
+
+//circle
+.points_bar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress {
+    transform: rotate(-90deg);
+}
+
+.progress_meterR,
+.progress_valueR {
+    fill: none;
+}
+
+.progress_meterR {
+    stroke: #000000;
+    stroke-opacity: 0.3;
+    transition: stroke-dashoffset 0.8s ease-out;
+}
+
+.progress_valueR {
+    stroke: #FFCC00;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.8s ease-out;
+}
+
+//inside circle
+.points_title{
+  position: absolute;
+  text-align: center;
+}
+
+.res_points{
+  font-family: $iOS-text-bold, $android-text-regular;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 0.41px;
+}
+
+.points_line{
+  height: 6px;
+  width: 80px;
+  background: #FFF;
+  border-radius: 8px;
+  margin-bottom: 5px;
+}
+
+.total_points{
+  font-family: $iOS-text-bold, $android-text-regular;
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: 0.35px;
+}
+
+.points_text{
+  font-family: $iOS-text-semibold, $android-text-regular;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -0.41px;
+}

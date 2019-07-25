@@ -1,0 +1,88 @@
+@import 'src/theme/fons.scss';
+
+
+$iOS-text-semibold: 'SF Pro Display Semibold';
+$iOS-text-bold: 'SF Pro Display Bold';
+$iOS-text-regular: 'SF Pro Display Regular';
+
+$android-text-medium: 'Roboto Medium';
+$android-text-regular: 'Roboto Regular';
+
+//question
+
+.margin_bottom{
+  margin-bottom: 78px;
+}
+
+.question{
+  font-family: $iOS-text-semibold, $android-text-regular;
+  font-size: 17px;
+  line-height: 22px;
+  /* or 129% */
+
+  letter-spacing: -0.41px;
+}
+
+.question:focus{
+  outline: none;
+}
+
+
+.extra_q_text{
+  display: none;
+  color: #000;
+  background: #FFF;
+  border-radius: 12px;
+  padding: 11px 16px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  font-size: 11px;
+}
+//answers
+
+.answer{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  margin-bottom: 8px;
+}
+
+.abcd{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transform: translateY(-10%);
+
+  height: 30px;
+  width: 40px;
+  border-radius: 18px;
+  color: #000;
+  background: #E5E5EA;
+
+  font-family: $iOS-text-semibold, $android-text-medium;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.24px;
+}
+
+.answer_text{
+  margin-left: 15px;
+
+  font-family: $iOS-text-regular, $android-text-medium;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.24px;
+}
+
+//colors
+.white_text{
+  --color: #FFF;
+  color: #FFF;
+}
+
+.orange{
+  --background: #EAAB00;
+  background: #EAAB00;
+}

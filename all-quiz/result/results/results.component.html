@@ -1,0 +1,17 @@
+<div class="complete_title">
+  You are completed<br>
+  {{quiz.title}}!
+</div>
+
+<div class="points_bar">
+  <svg class="progress" width="240" height="240" viewBox="0 0 240 240">
+    <circle class="progress_meterR" cx="120" cy="120" r="110" stroke-width="18" />
+    <circle class="progress_valueR" cx="120" cy="120" r="110" stroke-width="18" />
+  </svg>
+  <div class="points_title" >
+      <div class="res_points">{{cur_points}}</div>
+      <div class="points_line"></div>
+      <div class="total_points">{{ (quiz.questionAmount * 5) }}</div>
+      <div class="points_text">points</div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<ion-header no-border >
+    <ion-toolbar class="white_text" [ngClass]="{red: isRed, blue: isBlue, green: isGreen}">
+      <ion-buttons class="toolbar">
+        <ion-button (click)="navCtrl.navigateForward('/main-page')">
+          <ion-icon class="white_text" name="close-circle"></ion-icon>
+        </ion-button>
+        <span class="title_quiz_name"> {{quiz.title}} </span>
+        <ion-button>
+          <ion-icon class="white_text" name="share-alt"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <div class="quiz-bar">
+        <app-quiz-bar [cur_question]="cur_question" [quiz]="quiz"></app-quiz-bar>
+      </div>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="white_text" [ngClass]="{red: isRed, blue: isBlue, green: isGreen}">
+    <div class="results">
+      <app-results></app-results>
+    </div>
+</ion-content>
+
+<ion-footer no-border>
+    <ion-toolbar class="white_text" [ngClass]="{red: isRed, blue: isBlue, green: isGreen}">
+        <div *ngIf="already_been; then vacAndNext else Next"></div>
+        <ng-template #vacAndNext >
+          <ion-grid  class="margin_16">
+            <ion-row>
+              <ion-col>
+                <ion-button class="opacity" expand="block"  (click)="navCtrl.navigateForward('/vacancies')">Vacancies</ion-button>
+              </ion-col>
+              <ion-col>
+                <ion-button class="orange" expand="block" (click)="navCtrl.navigateForward('/main-page')">Next</ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ng-template>
+        <ng-template #Next>
+          <ion-button class="orange margin_20" expand="block" (click)="onNext()">Next</ion-button>
+        </ng-template>
+    </ion-toolbar>
+</ion-footer>

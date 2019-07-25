@@ -1,0 +1,52 @@
+@import 'src/theme/fons.scss';
+
+$iOS-text-semibold: 'SF Pro Display Semibold';
+$iOS-text-bold: 'SF Pro Display Bold';
+$iOS-text-regular: 'SF Pro Display Regular';
+
+$android-text-medium: 'Roboto Medium';
+$android-text-regular: 'Roboto Regular';
+
+
+
+.hoooray{
+  margin: 12px 20px 8px 20px;
+
+  font-family: $iOS-text-bold, $android-text-regular;
+  font-size: 28px;
+  line-height: 34px;
+
+  letter-spacing: 0.337647px;
+}
+
+.sub_hoooray{
+  margin: 0px 20px 16px 20px;
+
+  font-family: $iOS-text-semibold, $android-text-medium;
+  font-size: 17px;
+  line-height: 22px;
+
+  letter-spacing: -0.41px;
+}
+
+
+.next_button{
+  margin: 0 20px;
+  border-radius: 8px;
+}
+
+
+.white_text{
+  --color: #FFF;
+  color: #FFF;
+}
+
+.blue{
+  --background: #129AD2;
+  background: #129AD2;
+}
+
+.orange{
+  --background: #EAAB00;
+  background: #EAAB00;
+}

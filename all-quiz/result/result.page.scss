@@ -1,0 +1,68 @@
+@import 'src/theme/fons.scss';
+
+$iOS-text-semibold: 'SF Pro Display Semibold';
+$iOS-text-bold: 'SF Pro Display Bold';
+$iOS-text-regular: 'SF Pro Display Regular';
+
+$android-text-medium: 'Roboto Medium';
+$android-text-regular: 'Roboto Regular';
+
+.toolbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.title_quiz_name{
+  font-family: $iOS-text-semibold;
+  font-size: 17px;
+  line-height: 22px;
+
+  text-align: center;
+  letter-spacing: -0.41px;
+}
+
+.quiz-bar{
+  margin: 0px 40px;
+}
+
+.results{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+
+.margin_16{
+  margin: 0 16px;
+}
+
+.margin_20{
+  margin: 0 20px;
+}
+
+//colors
+
+.white_text{
+  --color: #FFF;
+  color: #FFF;
+}
+
+.green{
+  --background: #27AE60;
+}
+.blue{
+  --background: #129AD2;
+}
+.red{
+  --background: #EB5757;
+}
+
+.orange{
+  --background: #EAAB00;
+}
+.opacity{
+  --background: rgba(0, 0, 0, 0.3);
+}

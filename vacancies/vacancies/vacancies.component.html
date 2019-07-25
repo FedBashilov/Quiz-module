@@ -1,0 +1,20 @@
+<ion-slides pager="false" [options]="slideOpts">
+  <ion-slide *ngFor="let item of vacancies">
+    <ion-card class="card black_text orange">
+      <ion-card-header>
+        <ion-card-subtitle class="card_subtitle">Secret vacancy</ion-card-subtitle>
+        <ion-card-title class="card_title">{{item}}</ion-card-title>
+        <div class="flex-end">
+          <img class="logo" src="assets/images/python-logo.svg">
+        </div>
+      </ion-card-header>
+      <div class="card_footer">
+        <div class="footer_text">
+          Memorado helps improve your memory as
+          you become more efficient.
+        </div>
+        <ion-button class="more"> More </ion-button>
+      </div>
+    </ion-card>
+  </ion-slide>
+</ion-slides>

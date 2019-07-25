@@ -1,0 +1,113 @@
+
+@import 'src/theme/fons.scss';
+
+
+$iOS-text-semibold: 'SF Pro Display Semibold';
+$iOS-text-bold: 'SF Pro Display Bold';
+$iOS-text-regular: 'SF Pro Display Regular';
+
+$android-text-medium: 'Roboto Medium';
+$android-text-regular: 'Roboto Regular';
+
+
+//header
+
+.toolbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.title_quiz_name{
+  font-family: $iOS-text-semibold, $android-text-regular;
+  font-size: 17px;
+  line-height: 22px;
+
+  text-align: center;
+  letter-spacing: -0.41px;
+}
+
+//bar
+
+.all_bar{
+  display: grid;
+  grid-template-columns: 1fr 60px;
+  grid-column-gap: 20px;
+  padding: 0 15px;
+}
+
+.points_bar{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.points_title{
+  position: absolute;
+  text-align: center;
+}
+
+.cur_points{
+  font-family: $iOS-text-semibold, $android-text-medium;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.24px;
+}
+
+
+.p_text{
+  font-family: $iOS-text-regular, $android-text-medium;
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 0.07px;
+}
+
+//circle
+
+.progress {
+    transform: rotate(-90deg);
+}
+
+.progress_meterQ,
+.progress_valueQ {
+    fill: none;
+}
+
+.progress_meterQ {
+  stroke: #000000;
+  stroke-opacity:0.3;
+  transition: stroke-dashoffset 0.5s linear;
+}
+
+.progress_valueQ {
+  stroke: #FFCC00;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s linear;
+}
+
+
+.hidden{
+  visibility: hidden;
+}
+
+//colors
+
+.white_text{
+  --color: #FFF;
+  color: #FFF;
+}
+
+.blue{
+  --background: #129AD2;
+}
+.grey{
+  --background: #C7C7CC;
+}
+.orange{
+  --background: #EAAB00;
+}
+.opacity{
+  --background: rgba(0, 0, 0, 0.3);
+}

@@ -1,0 +1,24 @@
+
+<div class="white_text padding">
+  <div class="question margin_bottom" tabindex="-1">
+    {{cur_question}} . {{question_answers.question.text}}
+  </div>
+
+  <ion-text class="extra_q_text">
+  </ion-text>
+
+  <div class="all_answers">
+    <div class="answer" (click)="onChoose($event)" *ngFor="let item of question_answers.answer; index as i;">
+      <div>
+        <div class="abcd">
+          {{abcd[i]}}
+        </div>
+      </div>
+      <ion-text class="answer_text">
+        {{question_answers.answer[i].answerText}}
+      </ion-text>
+    </div>
+
+
+  </div>
+</div>

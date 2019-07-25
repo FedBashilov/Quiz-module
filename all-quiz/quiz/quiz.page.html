@@ -1,0 +1,51 @@
+<ion-header no-border class="white_text">
+  <ion-toolbar class="blue white_text">
+    <ion-buttons class="toolbar">
+      <ion-button (click)="navCtrl.navigateRoot('/main-page')">
+        <ion-icon  class="white_text" name="close-circle"></ion-icon>
+      </ion-button>
+      <span class="title_quiz_name" > {{quiz.title}} </span>
+      <ion-button>
+        <ion-icon  class="white_text hidden" name="share-alt"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <div class="all_bar">
+      <div class="quiz_bar">
+        <app-quiz-bar [cur_question]="cur_question" [quiz]="quiz"></app-quiz-bar>
+      </div>
+      <div class="points_bar">
+        <svg class="progress" width="60" height="60" viewBox="0 0 60 60">
+          <circle class="progress_meterQ" cx="30" cy="30" r="27" stroke-width="4" />
+          <circle class="progress_valueQ" cx="30" cy="30" r="27" stroke-width="4" />
+        </svg>
+        <div class="points_title">
+          <div class="cur_points">
+            {{cur_points}}
+          </div>
+          <div class="p_text">
+            points
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="blue white_text">
+  <app-question [cur_question]="cur_question" [question_answers]="question_answers" (onChanged)="onChanged($event)"></app-question>
+</ion-content>
+
+<ion-footer no-border>
+  <ion-toolbar class="blue white_text">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block" class="opacity" (click)="onSkip();">Skip</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button disabled = "true" expand="block" class="grey res_button" (click)="onNext();">Next</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>
